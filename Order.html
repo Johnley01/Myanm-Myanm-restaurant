@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passer une Commande</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        main {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #e65c00;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Passer une Commande</h1>
+    </header>
+    <main>
+        <form action="confirmation.html" method="POST">
+            <div>
+                <label for="name">Nom Complet :</label>
+                <input type="text" id="name" name="name" placeholder="Entrez votre nom complet" required>
+            </div>
+            <div>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+            </div>
+            <div>
+                <label for="phone">Téléphone :</label>
+                <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone" required>
+            </div>
+            <div>
+                <label for="dish">Choisissez un Plat :</label>
+                <select id="dish" name="dish" required>
+                    <option value="" disabled selected>Sélectionnez un plat</option>
+                    <option value="pizza">Pizza Margherita - 10$</option>
+                    <option value="burger">Burger Classique - 8$</option>
+                    <option value="pasta">Pâtes Carbonara - 12$</option>
+                    <option value="Soupe">Soupe - 12$</option>
+                    <option value="Grillades">Grillades - 11$</option>
+                    <option value="fied_chicken">Fried fied_chicken - 12$</option>
+                    <option value="Riz-curry">Riz-curry - 12$</option>
+                    <option value="hot_dog">hot_dog - 12$</option>
+                    <option value="spaghetti">spaghetti - 12$</option>
+                    <option value="burger_sandwich">burger_sandwich - 12$</option>
+                </select>
+            </div>
+            <div>
+                <label for="quantity">Quantité :</label>
+                <input type="number" id="quantity" name="quantity" min="1" placeholder="Entrez la quantité" required>
+            </div>
+            <div>
+                <label for="message">Instructions Spéciales (optionnel) :</label>
+                <textarea id="message" name="message" rows="4" placeholder="Ajoutez des détails pour votre commande"></textarea>
+            </div>
+            <button onclick="passerCommande()"><a href="Optionnelle.html"></a>Passer la commande</button>
+
+<script>
+  function passerCommande() {
+    alert("Votre commande a été enregistrée !");
+    // Ajouter d'autres actions ici
+  }
+</script>
+        </form>
+    </main>
+</body>
+</html>
